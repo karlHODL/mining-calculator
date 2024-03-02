@@ -1,0 +1,16 @@
+{
+  "name": "mining-calculator",
+  "version": "1.0.0",
+  "description": "estimate electricity costs and thermal loading for a room",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.1"
+  }
+}

@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label,
+form input, 
+form select {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+
+form input, 
+form select {
+    margin-bottom: 1rem;
+}
+
+
+button {
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#rate-results {
+    margin-top: 1rem;
+}

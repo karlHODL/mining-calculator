@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Mining Calculator</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Mining Calculator</h1>
+        </header>
+        <main>
+            <div class="form-container">
+                <form id="rate-form">
+                    <label for="zip-code">Zip Code:</label>
+                    <input type="text" id="zip-code" name="zip-code" placeholder="Zip Code" required>
+                    <label for="room-length">Room Length:</label>
+                    <input type="text" id="room-length" name="room-length" placeholder="Room Length" required>
+                    <label for="room-width">Room Width:</label>
+                    <input type="text" id="room-width" name="room-width" placeholder="Room Width" required>
+                    <label for="room-height">Room Height:</label>
+                    <input type="text" id="room-height" name="room-height" placeholder="Room Height" required>
+                    <label for="power-consumption">Power Consumption (Watts):</label>
+                    <input type="text" id="power-consumption" name="power-consumption" placeholder="Power Consumption" required>
+                    <label for="number-rigs">Number of Mining Rigs:</label>
+                    <input type="text" id="number-rigs" name="number-rigs" placeholder="Number of Mining Rigs" required>
+                    <label for="hours-per-day">Hours per day: <span id="hours-per-day-output">0</span></label>
+                    <input 
+                        type="range" 
+                        id="hours-per-day" 
+                        name="hours-per-day" 
+                        min="0" 
+                        max="24" 
+                        step="4" 
+                        value="0"
+                        oninput="updateHoursOutput(this.value)" />
+                    <label for="days-per-month">Days per month: <span id="days-per-month-output">0</span></label>
+                    <input 
+                        type="range" 
+                        id="days-per-month" 
+                        name="days-per-month" 
+                        min="0" 
+                        max="31" 
+                        step="1" 
+                        value="0"
+                        oninput="updateDaysOutput(this.value)" />
+                    <label for="customer-type">Customer Type:</label>
+                    <select id="customer-type" name="customer-type">
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="industrial">Industrial</option>
+                    </select>
+                    <button type="submit">Calculate</button>
+                </form>
+            </div>
+            <div id="rate-results"></div>
+        </main>
+        <script src="js/app.js"></script>
+    </body>
+</html>
